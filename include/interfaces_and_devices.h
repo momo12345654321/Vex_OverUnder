@@ -23,4 +23,6 @@ motor RB = motor(PORT14, ratio6_1, 0);
 motor RC = motor(PORT11, ratio6_1, 0);
 
 motor ITK = motor(PORT16, ratio18_1, 1);
+//motor elev1 = motor(PORT9, ratio18_1, 1);
+//motor elev2 = motor(PORT8,ratio18_1, 1);
 #endif
