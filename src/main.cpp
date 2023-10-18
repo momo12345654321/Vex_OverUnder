@@ -1,12 +1,13 @@
 #include "interfaces_and_devices.h"
 #include "definitions_and_declarations.h"
-
+#include "autonomous.h"
 
 using namespace vex;
 
 
 void auton(void){
- 
+    timerMove(100,630);
+
 }
 
 void usercontrol(void){
@@ -21,8 +22,8 @@ void usercontrol(void){
         
         ITK.spin(fwd,12000*(R1-R2), voltageUnits::mV);
 
-        //elev1.spin(fwd,120*(L1-L2), voltageUnits::mV);
-        //elev2.spin(fwd,120*(L1-L2), voltageUnits::mV);
+        elev1.spin(fwd, 12000*(-L1+L2), voltageUnits::mV);
+        elev2.spin(fwd, 12000*(L1-L2), voltageUnits::mV);
 
 
 
