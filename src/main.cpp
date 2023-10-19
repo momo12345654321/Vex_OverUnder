@@ -1,12 +1,30 @@
 #include "interfaces_and_devices.h"
 #include "definitions_and_declarations.h"
 #include "autonomous.h"
+#include "tasks.h"
 
 using namespace vex;
 
 
 void auton(void){
-    timerMove(100,630);
+    intake(-100);
+    timerMove(850,100);
+    //timerMove(100, 0);
+    timerTurnMove(180,150, -1);
+    intake(100);
+    timerMove(200, 175);
+    timerMove(100, -150);
+    wait(900);
+    intake(100);
+    timerMove(200, 175);
+    wait(900);
+    timerMove(300,-200);
+    intake(-100);
+    timerTurnMove(400,87.5, -1);
+    timerMove(350,150);
+    timerTurnMove(400,100, -1);
+    timerMove(400, 150);
+    
 
 }
 

@@ -9,8 +9,24 @@ void move(float v){
     RB.spin(fwd, 120 * v, voltageUnits::mV);
     RC.spin(fwd, 120 * v, voltageUnits::mV);
 }
+void move_turn(float v, int d){
+    LA.spin(fwd, 120 * v * d, voltageUnits::mV);
+    LB.spin(fwd, 120 * v * d, voltageUnits::mV);
+    LC.spin(fwd, 120 * v * d, voltageUnits::mV);
+    RA.spin(fwd, 120 * v * d, voltageUnits::mV);
+    RB.spin(fwd, 120 * v * d, voltageUnits::mV);
+    RC.spin(fwd, 120 * v * d, voltageUnits::mV);
+}
 void timerMove(int moveTime, float v){
     move(v);
     vexDelay(moveTime);
     move(0);
+}
+void timerTurnMove(int moveTime, float v, int d){
+    move_turn(v, d);
+    vexDelay(moveTime);
+    move(0);
+}
+void wait(int time){
+    vexDelay(time);
 }
