@@ -8,25 +8,35 @@ using namespace vex;
 
 void far_auton(void){
     intake(-100);
-    timerMove(850,100);
+    timerMove(1250,80);
+    timerMove(50,-100);
     //timerMove(100, 0);
-    timerTurnMove(180,150, -1);
+    timerTurnMove(400,50, -1);
     intake(100);
-    timerMove(200, 175);
-    timerMove(100, -150);
-    wait(900);
-    intake(100);
-    timerMove(200, 175);
-    wait(900);
-    timerMove(100,-200);
-    intake(-100);
-    timerTurnMove(400,87.5, -1);
+    wait(400);
+    timerMove(200, 100);
+    timerMove(100, -80);
     wait(500);
-    timerMove(400,150);
+    intake(100);
+    timerMove(200, 80);
+    wait(600);
+    timerMove(100,-80);
+    intake(-100);
+    timerTurnMove(500,55, -1);
+    wait(500);
+    timerMove(400,100);
     wait(200);
-    timerTurnMove(400,150, -1);
+    timerTurnMove(800,50, 1);
     wait(200);
-    timerMove(400, 150);
+    timerMove(400, 100);
+    wait(200);
+    timerTurnMove(200,50,-1);
+    intake(100);
+    timerMove(300, 100);
+    timerMove(100,100);
+    
+    
+    
 }
 void far_auton1(void){
     timerMove(400,-350);
@@ -72,7 +82,7 @@ void usercontrol(void){
 }
 
 int main() {
-    Competition.autonomous(far_auton1);
+    Competition.autonomous(far_auton);
     Competition.drivercontrol(usercontrol);
     //pre_auton();
     while(true){
