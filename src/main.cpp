@@ -6,7 +6,7 @@
 using namespace vex;
 
 
-void auton(void){
+void far_auton(void){
     intake(-100);
     timerMove(850,100);
     //timerMove(100, 0);
@@ -18,18 +18,38 @@ void auton(void){
     intake(100);
     timerMove(200, 175);
     wait(900);
-    timerMove(300,-200);
+    timerMove(100,-200);
     intake(-100);
     timerTurnMove(400,87.5, -1);
-    timerMove(350,150);
-    timerTurnMove(400,100, -1);
+    wait(500);
+    timerMove(400,150);
+    wait(200);
+    timerTurnMove(400,150, -1);
+    wait(200);
     timerMove(400, 150);
+}
+void far_auton1(void){
+    timerMove(400,-350);
+    wait(500);
+    timerMove(350,-100);
+    wait(200);
+    timerMove(250, 150);
+    wait(200);
+    timerTurnMove(350, 150, 1);
+}
+
+void near_auton(void) {
+   timerMove(300,-200);
+   wait(500);
+   timerMove(350, -100);
+    
     
 
+    
 }
 
 void usercontrol(void){
-    float rota=0.65;
+    float rota=0.55;
     while (1){
         LA.spin(fwd, 120 * (-Ch3-Ch1*rota), voltageUnits::mV);
         LB.spin(fwd, 120 * (-Ch3-Ch1*rota), voltageUnits::mV);
@@ -52,7 +72,7 @@ void usercontrol(void){
 }
 
 int main() {
-    Competition.autonomous(auton);
+    Competition.autonomous(far_auton1);
     Competition.drivercontrol(usercontrol);
     //pre_auton();
     while(true){

@@ -22,7 +22,7 @@ void timerMove(int moveTime, float v){
     vexDelay(moveTime);
     move(0);
 }
-void timerTurnMove(int moveTime, float v, int d){
+void timerTurnMove(int moveTime, float v, int d){ // (time, move, move)
     move_turn(v, d);
     vexDelay(moveTime);
     move(0);
@@ -30,3 +30,4 @@ void timerTurnMove(int moveTime, float v, int d){
 void wait(int time){
     vexDelay(time);
 }
+
