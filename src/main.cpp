@@ -26,11 +26,11 @@ void far_auton(void){
     wait(500);
     timerMove(400,100);
     wait(200);
-    timerTurnMove(800,50, 1);
+    timerTurnMove(750,50, 1);
     wait(200);
     timerMove(400, 100);
     wait(200);
-    timerTurnMove(200,50,-1);
+    timerTurnMove(230,50,-1);
     intake(100);
     timerMove(300, 100);
     timerMove(100,100);
@@ -38,15 +38,15 @@ void far_auton(void){
     
     
 }
-void far_auton1(void){
-    timerMove(400,-350);
-    wait(500);
-    timerMove(350,-100);
-    wait(200);
-    timerMove(250, 150);
-    wait(200);
-    timerTurnMove(350, 150, 1);
-}
+// void far_auton1(void){
+//     timerMove(400,-350);
+//     wait(500);
+//     timerMove(350,-100);
+//     wait(200);
+//     timerMove(250, 150);
+//     wait(200);
+//     timerTurnMove(350, 150, 1);
+// }
 
 void near_auton(void) {
    timerMove(300,-200);
