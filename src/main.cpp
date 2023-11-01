@@ -26,14 +26,17 @@ void far_auton(void){
     wait(500);
     timerMove(400,100);
     wait(200);
-    timerTurnMove(750,50, 1);
+    timerTurnMove(630,50, 1);
     wait(200);
     timerMove(400, 100);
     wait(200);
     timerTurnMove(230,50,-1);
     intake(100);
     timerMove(300, 100);
+    wait(100);
     timerMove(100,100);
+    wait(100);
+    timerMove(150,-80);
     
     
     
@@ -70,8 +73,8 @@ void usercontrol(void){
         
         ITK.spin(fwd,12000*(R1-R2), voltageUnits::mV);
 
-        elev1.spin(fwd, 12000*(-L1+L2), voltageUnits::mV);
-        elev2.spin(fwd, 12000*(L1-L2), voltageUnits::mV);
+        elev1.spin(fwd, 12000*(L1-L2), voltageUnits::mV);
+        elev2.spin(fwd, 12000*(-L1+L2), voltageUnits::mV);
 
 
 
