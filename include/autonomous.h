@@ -1,6 +1,8 @@
 #include "definitions_and_declarations.h"
 #include "interfaces_and_devices.h"
 
+using namespace vex;
+
 void move(float v){
     LA.spin(fwd, -120 * v, voltageUnits::mV);
     LB.spin(fwd, -120 * v, voltageUnits::mV);

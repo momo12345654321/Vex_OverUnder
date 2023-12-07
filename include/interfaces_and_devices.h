@@ -25,4 +25,8 @@ motor RC = motor(PORT11, ratio6_1, 0);
 motor ITK = motor(PORT16, ratio18_1, 1);
 motor elev1 = motor(PORT9, ratio18_1, 0);
 motor elev2 = motor(PORT10,ratio18_1, 0);
+
+digital_out sol = digital_out(Brain.ThreeWirePort.A);
+
+
 #endif

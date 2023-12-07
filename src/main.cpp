@@ -7,42 +7,50 @@ using namespace vex;
 
 
 void far_auton(void){
+
     intake(-100);
-    timerMove(1250,80);
-    timerMove(50,-100);
-    //timerMove(100, 0);
-    timerTurnMove(400,50, -1);
+    timerMove(1160,80);
+    timerMove(50,-50);
+    wait(200);
+    timerTurnMove(375,45, -1);
     intake(100);
-    wait(400);
-    timerMove(200, 100);
+    wait(300);
+    timerMove(245, 80);
+    wait(200);
     timerMove(100, -80);
-    wait(500);
+    timerMove(50, 50);
+    wait(200);
     intake(100);
-    timerMove(200, 80);
-    wait(600);
-    timerMove(100,-80);
+    timerMove(250, 80);
+    wait(200);
+    timerMove(120,-80);
+    wait(200);
     intake(-100);
-    timerTurnMove(500,55, -1);
-    wait(500);
-    timerMove(400,100);
+    timerTurnMove(470, 52.5, -1);
     wait(200);
-    timerTurnMove(630,50, 1);
+    timerMove(400,80);
     wait(200);
-    timerMove(400, 100);
+    timerMove(100,-80);
     wait(200);
-    timerTurnMove(230,50,-1);
+    timerTurnMove(605, 55, -1);
+    timerMove(450, 80);
     intake(100);
-    timerMove(300, 100);
-    wait(100);
-    timerMove(100,100);
-    wait(100);
-    timerMove(150,-80);
+    wait(200);
+    timerMove(225, 100);
+    wait(200);
+    timerMove(100, -80);
+    wait(200);
+    timerMove(225, 100);
+    wait(200);
+    intake(0);
+    timerMove(200, -100);
+    
     
     
     
 }
 // void far_auton1(void){
-//     timerMove(400,-350);
+//     timerMove(400,-350); 
 //     wait(500);
 //     timerMove(350,-100);
 //     wait(200);
@@ -52,17 +60,23 @@ void far_auton(void){
 // }
 
 void near_auton(void) {
-   timerMove(300,-200);
-   wait(500);
-   timerMove(350, -100);
-    
+    timerMove(450,-100);
+    wait(200);
+    timerMove(350, 80);
+    wait(200);
+    timerMove(450,-100);
+    wait(200);
+    timerMove(350, 80);
+
+
+
     
 
     
 }
 
 void usercontrol(void){
-    float rota=0.55;
+    float rota=0.65;
     while (1){
         LA.spin(fwd, 120 * (-Ch3-Ch1*rota), voltageUnits::mV);
         LB.spin(fwd, 120 * (-Ch3-Ch1*rota), voltageUnits::mV);
@@ -81,6 +95,14 @@ void usercontrol(void){
         Brain.Screen.printAt(10,20,"hello world");
         Brain.Screen.printAt(10,20," %d ",Contrler.Axis3.position(percent));
         wait(10, msec);
+
+        if(A){
+            sol.set(true);//1 bool
+        }
+    
+        if(B){
+            sol.set(false);//0
+        }
     }
 }
 
