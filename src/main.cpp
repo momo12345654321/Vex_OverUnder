@@ -50,7 +50,7 @@ void far_auton(void){
     
 }
 // void far_auton1(void){
-//     timerMove(400,-350); 
+//     timerMove(400,-350);
 //     wait(500);
 //     timerMove(350,-100);
 //     wait(200);
@@ -96,12 +96,11 @@ void usercontrol(void){
         Brain.Screen.printAt(10,20," %d ",Contrler.Axis3.position(percent));
         wait(10, msec);
 
-        if(A){
-            sol.set(true);//1 bool
-        }
-    
-        if(B){
-            sol.set(false);//0
+            
+        if(BA){
+            sol.set(!sol);//1 bool
+            sol1.set(!sol1);//0
+            //wait(100,msec);
         }
     }
 }

@@ -2,6 +2,7 @@
 #define definition_h
 
 #include "interfaces_and_devices.h"
+using namespace vex;
 
 #define Ch1  Contrler.Axis1.position(percent)
 #define Ch2  Contrler.Axis2.position(percent)
@@ -13,10 +14,10 @@
 #define L1  Contrler.ButtonL1.pressing()
 #define L2  Contrler.ButtonL2.pressing()
 
-#define A Contrler.ButtonA.pressing() 
-#define B Contrler.ButtonB.pressing() 
-#define X Contrler.ButtonX.pressing()
-#define Y Contrler.ButtonY.pressing() 
+#define BA Contrler.ButtonA.pressing() 
+#define BB Contrler.ButtonB.pressing() 
+#define BX Contrler.ButtonX.pressing()
+#define BY Contrler.ButtonY.pressing() 
 
 
 
